@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Turpyn | Portfolio</title>
+
+  <!-- Particles.js -->
+  <script src="./js/particles.min.js"></script>
+  <link rel="stylesheet" href="./css/core.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div id="particles-js"></div>
+
+    <div class="hero-content">
+      <div class="announcement">
+        <span class="badge">💼 Internal Project</span>
+        <span class="text">Currently working on a private banking platform — not publicly accessible.</span>
+      </div>
+
+      <h1 class="headline">
+        I help businesses turn ideas <br />
+        into <span class="highlight">seamless digital experiences</span>
+      </h1>
+
+      <p class="intro">
+        Hello, I'm <strong>David Turpyn</strong> <span class="wave">👋</span>, a <strong>Full Stack Developer</strong>
+        with a focus on high-impact internal tools and enterprise systems.
+      </p>
+
+      <div class="cta">
+        <a href="#contact" class="connect-btn">
+          Let's Connect <span class="arrow">➜</span>
+        </a>
+        <a href="mailto:davidapricioturpyn@gmail.com" class="email">
+          <i class="fas fa-envelope"></i> davidapricioturpyn@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-section">
+      <div class="about-text">
+        <h4>MORE ABOUT ME</h4>
+        <h1>Hi there! I'm <span>David Turpyn</span></h1>
+        <p>
+          I'm David Turpyn, a proactive full-stack developer passionate about building dynamic and modern web
+          experiences.
+          From frontend to backend, I love solving complex problems with clean, efficient, and scalable code.
+          My core stack includes .NET CORE, Java, and PHP — and I'm always eager to learn and explore new technologies.
+        </p>
+        <p>
+          When I’m not immersed in work, you’ll find me exploring new ideas, staying curious, and diving into side
+          projects.
+          I believe in balance — between code and creativity — and I love embracing every part of the journey.
+        </p>
+        <p>I believe in waking up each day eager to make a difference!</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fas fa-code"></i></a>
+        </div>
+      </div>
+
+      <div class="about-photo">
+        <div class="photo-card">
+          <img src="https://avatars.githubusercontent.com/u/78304932?v=4" alt="David Turpyn" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Enterprise Loan Management System</h3>
+        <p>
+          Internal web-based tool for streamlining loan application workflows in the banking sector. Built with .NET
+          Core, React, and SQL Server. My role focused on backend APIs and implementing secure authentication flows.
+        </p>
+        <div class="tags">
+          <span class="tag">.NET Core</span>
+          <span class="tag">React</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">Internal Use</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Customer Insight Dashboard</h3>
+        <p>
+          Designed and developed internal dashboards to help relationship managers view client activity insights. Data
+          was pulled from various systems and visualized using Chart.js.
+        </p>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Chart.js</span>
+          <span class="tag">API Integration</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Digital Banking App</h3>
+        <p>
+          Created a mobile-responsive digital banking platform, enabling users to manage their finances, track expenses,
+          and transfer money seamlessly. Built with Angular, Node.js, and MongoDB.
+        </p>
+        <div class="tags">
+          <span class="tag">Angular</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Mobile-first</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-container">
+      <p>
+        If you'd like to connect, feel free to send me a message via the form below or email me directly at
+        <strong><a href="mailto:davidapricioturpyn@gmail.com">davidapricioturpyn@gmail.com</a></strong>.
+      </p>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <script>
+    // Load particles.js
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 70 },
+        size: { value: 3 },
+        color: { value: "#00ffcc" },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ffcc",
+          opacity: 0.4,
+          width: 1
+        },
+        move: { speed: 2 }
+      }
+    });
+
+    // Fade in hero content on page load
+    window.addEventListener('load', () => {
+      document.querySelector('.hero-content').classList.add('visible');
+    });
+  </script>
+</body>
+
+</html>
