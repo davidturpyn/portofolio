@@ -4,17 +4,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Developer | Internal Banking Systems</title>
-
-  <link rel="stylesheet" href="./css/core.css">
-  <script src="./js/particles.min.js"></script> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Your Name | Portfolio</title>
+  <style>
+    /* Global Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      padding: 0;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #121212;
+      z-index: 1000;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    nav a {
+      margin: 0 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    nav a:hover {
+      border-bottom: 2px solid #00ffcc;
+    }
+    .hero {
+      text-align: center;
+      padding-top: 100px;
+    }
+    .projects .project {
+      margin-bottom: 40px;
+    }
+    .project h3 {
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #121212;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <nav class="navbar">
+    <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -23,152 +76,43 @@
   </header>
 
   <section id="home" class="hero">
-    <div class="hero-content">
-      <div class="announcement">
-        <span class="badge">💼 Internal Project</span>
-        <span class="text">
-          Saat ini saya mengembangkan sistem internal perbankan yang bersifat privat dan tidak dapat diakses publik.
-          Detail proyek hanya ditampilkan secara ringkas untuk menjaga kerahasiaan informasi perusahaan.
-        </span>
-      </div>
-
-      <h1 class="headline">
-        Saya membantu instansi <br />
-        membangun <span class="highlight">solusi digital internal</span> yang efisien
-      </h1>
-
-      <p class="intro">
-        Halo, saya <strong>[Nama Anda]</strong> <span class="wave">👋</span>, seorang <strong>Full Stack Developer</strong>
-        yang berpengalaman dalam membangun sistem internal skala enterprise.
-      </p>
-
-      <div class="cta">
-        <a href="#contact" class="connect-btn">Hubungi Saya <span class="arrow">➜</span></a>
-        <a href="mailto:davidapricioturpyn@gmail.com" class="email">
-          <i class="fas fa-envelope"></i> davidapricioturpyn@gmail.com
-        </a>
-      </div>
-    </div>
+    <h1>Your Name</h1>
+    <p>Full Stack Developer | Passionate About Building Seamless Digital Experiences</p>
   </section>
 
   <section id="about">
-    <h2>Tentang Saya</h2>
-    <div class="about-section">
-      <div class="about-text">
-        <h4>PROFIL</h4>
-        <h1>Halo, saya <span>[Nama Anda]</span></h1>
-        <p>
-          Saya adalah developer fullstack yang fokus membangun sistem internal untuk industri keuangan dan perbankan.
-          Saya terbiasa menggunakan .NET Core, Java, dan React untuk menyelesaikan masalah bisnis dengan solusi digital yang scalable.
-        </p>
-        <p>
-          Saya senang mengoptimalkan proses manual menjadi otomatis, dan percaya bahwa sistem internal yang baik
-          dapat meningkatkan efisiensi tim secara signifikan.
-        </p>
-
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-      <div class="about-photo">
-        <div class="photo-card">
-          <img src="https://avatars.githubusercontent.com/u/placeholder" alt="Your Photo" />
-        </div>
-      </div>
-    </div>
+    <h2>About Me</h2>
+    <p>
+      I'm a developer with a passion for creating intuitive and efficient web applications. With experience in both front-end and back-end technologies, I strive to build solutions that are both functional and user-friendly.
+    </p>
   </section>
 
-  <section id="projects">
-    <h2>Proyek Internal</h2>
-    <div class="projects-container">
-
-      <div class="project-card">
-        <h3>Loan Workflow System</h3>
-        <p><strong>Status:</strong> Internal - Banking</p>
-        <p>
-          Sistem pengajuan dan pelacakan pinjaman digital yang digunakan oleh staf cabang bank. 
-          Saya bertanggung jawab dalam pembuatan REST API menggunakan .NET Core dan integrasi frontend React.
-        </p>
-        <p><strong>Hasil:</strong> Mengurangi waktu proses pengajuan dari 5 hari menjadi 2 hari, dan kesalahan input turun 70%.</p>
-        <div class="tags">
-          <span class="tag">.NET Core</span>
-          <span class="tag">React</span>
-          <span class="tag">SQL Server</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Customer Insight Dashboard</h3>
-        <p><strong>Status:</strong> Internal Dashboard</p>
-        <p>
-          Dashboard visualisasi yang menampilkan data interaksi nasabah secara real-time untuk analis hubungan pelanggan.
-          Data diambil dari berbagai sumber melalui API terpusat, ditampilkan dengan Chart.js.
-        </p>
-        <p><strong>Peran:</strong> Backend & integrasi API antar sistem.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">Chart.js</span>
-          <span class="tag">Microservices</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Digital Banking Prototype</h3>
-        <p><strong>Status:</strong> Proof of Concept</p>
-        <p>
-          Sistem perbankan digital berbasis web yang memungkinkan pengguna simulasi transfer dan cek saldo dengan aman. 
-          Fokus utama pada keamanan sesi dan desain mobile-first.
-        </p>
-        <div class="tags">
-          <span class="tag">Angular</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">MongoDB</span>
-        </div>
-      </div>
-
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Internal Banking Application</h3>
+      <p>
+        Developed a secure internal banking application to streamline financial operations across multiple branches. Focused on backend API development and implementing robust authentication mechanisms.
+      </p>
+    </div>
+    <div class="project">
+      <h3>Customer Dashboard</h3>
+      <p>
+        Created a dynamic dashboard for customer service representatives to manage and analyze client data effectively. Integrated real-time data visualization tools for enhanced decision-making.
+      </p>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Kontak</h2>
-    <div class="contact-container">
-      <p>
-        Ingin bekerja sama atau berdiskusi? Kirimkan pesan langsung melalui email
-        <strong><a href="mailto:davidapricioturpyn@gmail.com">davidapricioturpyn@gmail.com</a></strong>.
-      </p>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="name" placeholder="Nama Anda" required />
-        <input type="email" name="_replyto" placeholder="Email Anda" required />
-        <textarea name="message" rows="5" placeholder="Pesan Anda..." required></textarea>
-        <button type="submit">Kirim</button>
-      </form>
-    </div>
+    <h2>Contact</h2>
+    <p>
+      Feel free to reach out via email at <a href="mailto:your.email@example.com">your.email@example.com</a>.
+    </p>
   </section>
-</body>
-<script>
-    // Load particles.js
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 70 },
-        size: { value: 3 },
-        color: { value: "#00ffcc" },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#00ffcc",
-          opacity: 0.4,
-          width: 1
-        },
-        move: { speed: 2 }
-      }
-    });
 
-    // Fade in hero content on page load
-    window.addEventListener('load', () => {
-      document.querySelector('.hero-content').classList.add('visible');
-    });
-  </script>
+  <footer>
+    <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+  </footer>
+</body>
 
 </html>
