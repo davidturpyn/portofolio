@@ -7,6 +7,7 @@
   <title>Portofolio Developer | Internal Banking Systems</title>
 
   <link rel="stylesheet" href="./css/core.css">
+  <script src="./js/particles.min.js"></script> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
@@ -146,5 +147,28 @@
     </div>
   </section>
 </body>
+<script>
+    // Load particles.js
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 70 },
+        size: { value: 3 },
+        color: { value: "#00ffcc" },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ffcc",
+          opacity: 0.4,
+          width: 1
+        },
+        move: { speed: 2 }
+      }
+    });
+
+    // Fade in hero content on page load
+    window.addEventListener('load', () => {
+      document.querySelector('.hero-content').classList.add('visible');
+    });
+  </script>
 
 </html>
