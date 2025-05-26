@@ -73,6 +73,21 @@ nav a.resume-link:hover {
   color: #2d2a2e;
 }
 
+.about-section {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 80px auto; /* margin bawah buat spacing dengan section selanjutnya */
+  padding: 0 20px; /* agar ada padding sisi kecil di layar kecil */
+}
+
+.about-section p {
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #ae81ff; /* warna purple-ish sesuai tema */
+  font-size: 16px;
+}
+
+
 
 /* Social left vertical */
 .social-icons {
@@ -111,10 +126,9 @@ nav a.resume-link:hover {
   opacity: 0.5;
 }
 
-/* Email right vertical */
 .email-fixed {
   position: fixed;
-  right: 20px;
+  right: 50px; /* geser ke kiri dari 20px jadi 40px */
   bottom: 40px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -126,9 +140,23 @@ nav a.resume-link:hover {
   z-index: 100;
   user-select: none;
   transition: color 0.3s;
+  display: inline-block;
+  padding-bottom: 8px; /* ruang buat garis */
+  text-align: center;
 }
+
 .email-fixed:hover {
   color: #fd971f;
+}
+
+.email-fixed::after {
+  content: '';
+  display: block;
+  width: 100%;        /* lebar garis sama dengan lebar email */
+  height: 1px;        /* ketebalan garis */
+  background-color: #f92672;
+  opacity: 0.5;
+  margin-top: 6px;    /* jarak dari teks */
 }
 
 /* Section headings */
