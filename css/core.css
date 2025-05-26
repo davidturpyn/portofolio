@@ -297,7 +297,7 @@ ul {
     left: 0;
     right: 0;
     background-color: #2d2a2e;
-    padding: 10px 5px;
+    padding: 16px 20px;
     z-index: 1000;
     flex-direction: row;
     justify-content: space-between;
