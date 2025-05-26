@@ -1,24 +1,34 @@
 /* Reset & base */
 * {
   box-sizing: border-box;
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
-html, body {
+
+html,
+body {
   height: 100%;
   font-family: 'Fira Code', 'Source Code Pro', monospace, monospace;
-  background: #2d2a2e; /* Monokai Pro dark bg */
-  color: #f8f8f2; /* light text */
+  background: #2d2a2e;
+  /* Monokai Pro dark bg */
+  color: #f8f8f2;
+  /* light text */
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 a {
-  color: #f92672; /* pinkish */
+  color: #f92672;
+  /* pinkish */
   text-decoration: none;
   cursor: pointer;
 }
+
 a:hover {
-  color: #fd971f; /* orange highlight */
+  color: #fd971f;
+  /* orange highlight */
 }
+
 /* Container */
 main {
   max-width: 700px;
@@ -26,32 +36,54 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Navbar Right Top */
-nav {
+nav.navbar {
   position: fixed;
   top: 40px;
+  left: 40px;
   right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav .logo svg {
+  height: 60px;
+  width: auto;
+  /* biar proporsional */
+  vertical-align: middle;
+  display: inline-block;
+}
+
+nav .logo svg:hover rect {
+  fill: #444;
+}
+
+nav .logo svg:hover text {
+  fill: #ff79c6;
+}
+
+.nav-links {
   display: flex;
   gap: 24px;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 2px;
-  z-index: 1000;
-  align-items: center; /* agar semua item sejajar vertikal */
 }
 
-nav a {
+.nav-links a {
   text-transform: uppercase;
   transition: color 0.3s;
-  display: flex;         /* buat teks center vertikal */
+  display: flex;
   align-items: center;
-  height: 32px;          /* tinggi seragam */
-  line-height: 1;
+  height: 32px;
   padding: 0 8px;
   border-radius: 4px;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: #fd971f;
 }
 
@@ -60,7 +92,8 @@ nav a.resume-link {
   padding: 6px 12px;
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
-  display: inline-flex;  /* agar inline dan bisa align */
+  display: inline-flex;
+  /* agar inline dan bisa align */
   align-items: center;
   height: 32px;
   line-height: 1;
@@ -73,17 +106,22 @@ nav a.resume-link:hover {
   color: #2d2a2e;
 }
 
+
+
 .about-section {
   text-align: center;
   max-width: 500px;
-  margin: 0 auto 80px auto; /* margin bawah buat spacing dengan section selanjutnya */
-  padding: 0 20px; /* agar ada padding sisi kecil di layar kecil */
+  margin: 0 auto 80px auto;
+  /* margin bawah buat spacing dengan section selanjutnya */
+  padding: 0 20px;
+  /* agar ada padding sisi kecil di layar kecil */
 }
 
 .about-section p {
   margin-top: 20px;
   line-height: 1.6;
-  color: #ae81ff; /* warna purple-ish sesuai tema */
+  color: #ae81ff;
+  /* warna purple-ish sesuai tema */
   font-size: 16px;
 }
 
@@ -99,6 +137,7 @@ nav a.resume-link:hover {
   gap: 16px;
   z-index: 100;
 }
+
 .social-icons a {
   color: #f92672;
   transition: color 0.3s;
@@ -108,14 +147,17 @@ nav a.resume-link:hover {
   width: 28px;
   height: 28px;
 }
+
 .social-icons a:hover {
   color: #fd971f;
 }
+
 .social-icons svg {
   width: 20px;
   height: 20px;
   fill: currentColor;
 }
+
 .social-icons::after {
   content: '';
   display: block;
@@ -128,7 +170,8 @@ nav a.resume-link:hover {
 
 .email-fixed {
   position: fixed;
-  right: 50px; /* geser ke kiri dari 20px jadi 40px */
+  right: 50px;
+  /* geser ke kiri dari 20px jadi 40px */
   bottom: 40px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -141,7 +184,8 @@ nav a.resume-link:hover {
   user-select: none;
   transition: color 0.3s;
   display: inline-block;
-  padding-bottom: 8px; /* ruang buat garis */
+  padding-bottom: 8px;
+  /* ruang buat garis */
   text-align: center;
 }
 
@@ -152,11 +196,14 @@ nav a.resume-link:hover {
 .email-fixed::after {
   content: '';
   display: block;
-  width: 100%;        /* lebar garis sama dengan lebar email */
-  height: 1px;        /* ketebalan garis */
+  width: 100%;
+  /* lebar garis sama dengan lebar email */
+  height: 1px;
+  /* ketebalan garis */
   background-color: #f92672;
   opacity: 0.5;
-  margin-top: 6px;    /* jarak dari teks */
+  margin-top: 6px;
+  /* jarak dari teks */
 }
 
 /* Section headings */
@@ -166,6 +213,7 @@ h1 {
   color: #f92672;
   margin-bottom: 20px;
 }
+
 h2 {
   font-size: 42px;
   font-weight: 800;
@@ -174,6 +222,7 @@ h2 {
   position: relative;
   display: inline-block;
 }
+
 /* Animated highlight underline for name */
 h2::after {
   content: '';
@@ -188,9 +237,17 @@ h2::after {
   border-radius: 4px;
   animation: pulseHighlight 3s infinite;
 }
+
 @keyframes pulseHighlight {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
 }
 
 h3 {
@@ -199,37 +256,47 @@ h3 {
   color: #f92672;
   margin-bottom: 8px;
 }
-p, li {
+
+p,
+li {
   font-size: 16px;
   line-height: 1.6;
-  color: #ae81ff; /* purple-ish */
+  color: #ae81ff;
+  /* purple-ish */
 }
+
 ul {
   list-style-type: disc;
   margin-left: 20px;
 }
 
 /* Experience and Work lists */
-.experience-item, .work-item {
+.experience-item,
+.work-item {
   margin-bottom: 32px;
 }
+
 .job-title {
   font-weight: 700;
   color: #f8f8f2;
 }
+
 .job-company {
   color: #f92672;
   font-weight: 600;
 }
+
 .job-duration {
   font-style: italic;
   font-size: 14px;
   color: #ae81ff;
   margin-bottom: 8px;
 }
+
 .job-description {
   margin-top: 8px;
 }
+
 .tech-list {
   margin-top: 8px;
   font-size: 14px;
@@ -243,13 +310,15 @@ nav a.resume-link {
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
 }
+
 nav a.resume-link:hover {
   background-color: #f92672;
   color: #2d2a2e;
 }
 
 /* Focus styles for accessibility */
-a:focus, button:focus {
+a:focus,
+button:focus {
   outline: 2px solid #f92672;
   outline-offset: 2px;
 }
@@ -265,6 +334,7 @@ a:focus, button:focus {
   box-shadow: 0 0 15px #f9267266;
   transition: transform 0.3s ease;
 }
+
 .profile-photo:hover {
   transform: scale(1.05);
 }
@@ -277,15 +347,18 @@ a:focus, button:focus {
     gap: 16px;
     font-size: 12px;
   }
+
   .email-fixed {
     right: 10px;
     bottom: 20px;
     font-size: 12px;
     letter-spacing: 0.1em;
   }
+
   main {
     padding: 80px 20px 80px 20px;
   }
+
   .profile-photo {
     width: 120px;
     height: 120px;
