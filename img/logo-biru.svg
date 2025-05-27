@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Border minimalis dan membulat -->
+  <rect x="5" y="5" width="90" height="90" rx="10" fill="none" stroke="#61afef" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"></rect>
+
+  <!-- Huruf D, clean dan modern -->
+  <text x="50%" y="57%" text-anchor="middle" fill="#61afef" font-size="58" font-family="Fira Code, Source Code Pro, monospace" font-weight="600" letter-spacing="1">
+    D
+  </text>
+</svg>

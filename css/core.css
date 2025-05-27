@@ -51,12 +51,12 @@ nav .logo svg {
   display: inline-block;
 }
 
-nav .logo svg:hover rect {
-  fill: #3e4451;
+.logo svg:hover rect {
+  stroke: #e5c07b; /* Biru jadi kuning saat hover */
 }
 
-nav .logo svg:hover text {
-  fill: #c678dd; /* Purple */
+.logo svg:hover text {
+  fill: #e5c07b;
 }
 
 .nav-links {
