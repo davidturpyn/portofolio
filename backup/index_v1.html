@@ -5,39 +5,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-    content="Portfolio of David Turpyn, Software Developer specializing in .NET, Java, and enterprise banking systems.">
-  <meta name="author" content="David Turpyn" />
+    content="David Turpyn - Software Developer Portfolio. Specializing in .NET, Java, and enterprise systems for the banking industry.">
+  <meta name="author" content="David Turpyn">
   <meta property="og:title" content="David Turpyn - Software Developer">
   <meta property="og:description"
-    content="Explore the portfolio of David Turpyn, expert in backend technologies including .NET, Java, and low-code platforms for financial systems.">
+    content="Portfolio of David Turpyn, expert in .NET, Java, low-code, and financial systems development.">
   <meta property="og:image" content="./img/profile.jpg">
   <meta property="og:type" content="website">
-  <link rel="icon" href="./img/logo_putih.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./css/core1.css">
+  <link rel="icon" href="./img/logo-biru.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./css/core.css">
   <title>David Turpyn</title>
 </head>
 
 <body>
 
-  <!-- Navigation -->
+  <!-- Navbar right top -->
   <nav class="navbar" aria-label="Primary navigation">
-    <a href="/" class="logo" aria-label="David Turpyn Homepage">
+    <!-- Logo kiri -->
+    <a href="https://davidturpyn.github.io/portofolio/" class="logo">
       <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="4" width="92" height="92" rx="12" fill="none" stroke="#FFFFFF" stroke-width="2" />
-        <text x="50%" y="58%" text-anchor="middle" fill="#FFFFFF" font-size="60" font-family="Arial, sans-serif"
-          font-weight="bold">D</text>
+        <!-- Border lebih tipis dan tetap modern -->
+        <rect x="4" y="4" width="92" height="92" rx="12" fill="none" stroke="#61afef" stroke-width="2" />
+
+        <!-- Huruf D di tengah -->
+        <text x="50%" y="58%" text-anchor="middle" fill="#61afef" font-size="60" font-family="Arial, sans-serif"
+          font-weight="bold">
+          D
+        </text>
       </svg>
     </a>
+
+
+
+
+    <!-- Menu kanan -->
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
-      <a href="./file/resume.pdf" target="_blank" rel="noopener" class="resume-link">Resume</a>
+      <a href="./file/resume.pdf" target="_blank" rel="noopener" class="resume-link" aria-label="Resume">Resume</a>
     </div>
   </nav>
 
-   <!-- Social icons left vertical -->
+
+  <!-- Social icons left vertical -->
   <div class="social-icons" aria-label="Social media links">
     <a href="https://github.com/davidturpyn" target="_blank" rel="noopener" aria-label="GitHub">
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -69,76 +81,60 @@
     </a>
   </div>
 
-
-  <!-- Social Links -->
-  <aside class="social-icons" aria-label="Social media links">
-    <a href="https://github.com/davidturpyn" target="_blank" rel="noopener" aria-label="GitHub Profile">
-      <!-- GitHub SVG Icon -->
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="..."/></svg>
-    </a>
-    <a href="https://instagram.com/davidturpyn" target="_blank" rel="noopener" aria-label="Instagram Profile">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="..."/></svg>
-    </a>
-    <a href="https://linkedin.com/in/davidturpyn" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="..."/></svg>
-    </a>
-  </aside>
-
-  <!-- Email Fixed Right -->
+  <!-- Email right vertical -->
   <a href="mailto:davidapricioturpyn@gmail.com" class="email-fixed"
-    aria-label="Email David">davidapricioturpyn@gmail.com</a>
+    aria-label="Send email">davidapricioturpyn@gmail.com</a>
 
   <main>
-
-    <!-- About Section -->
-    <section id="about" class="about-section" aria-labelledby="about-title">
+    <!-- About -->
+    <section id="about" tabindex="-1" aria-labelledby="about-title" class="about-section">
       <img src="./img/profile.jpg" alt="David Turpyn" loading="lazy" class="profile-photo" />
       <h1 id="about-title">Hi, my name is</h1>
       <h2>David Turpyn</h2>
       <p>
-        I'm a passionate software developer with a focus on building secure, scalable web applications. I specialize in
-        .NET Core 9, Java Spring Boot, and low-code platforms—delivering impactful solutions in the banking sector
-        through my roles at BCA Syariah and PT Bank Central Asia Tbk.
+        I'm a software developer passionate about building modern web applications with technologies like .NET Core 9,
+        Java, and low-code platforms. With hands-on experience in the banking industry at BCA Syariah and PT Bank
+        Central Asia Tbk, I specialize in developing scalable, secure, and efficient systems tailored to financial
+        operations.
       </p>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" aria-labelledby="experience-title" style="margin-top: 80px;">
-      <h2 id="experience-title">Professional Experience</h2>
+
+    <!-- Experience -->
+    <section id="experience" tabindex="-1" aria-labelledby="experience-title" style="margin-top:80px;">
+      <h2 id="experience-title">Where I’ve Worked</h2>
 
       <article class="experience-item">
-        <h3 class="job-title">IT Assistant Officer – Management Application</h3>
-        <p class="job-company">
-          <a href="https://www.bcasyariah.co.id/" target="_blank" rel="noopener">BCA Syariah</a>
+        <h3 class="job-title">IT Assistant Officer Management Application</h3>
+        <p class="job-company"><a href="https://www.bcasyariah.co.id/" target="_blank" rel="noopener">BCA Syariah</a>
         </p>
-        <p class="job-duration">Dec 2024 – Present</p>
+        <p class="job-duration">December 2024 - Present</p>
         <p class="job-description">
-          Leading the design and development of internal banking systems with .NET Core 9 and Java Spring Boot. Collaborating
-          with cross-functional teams to streamline operational efficiency while ensuring system security and scalability.
+          Responsible for designing and developing internal banking applications to optimize operational workflows,
+          using .NET Core 9 and Java Spring. Collaborate with cross-functional teams to deliver scalable and secure
+          solutions.
         </p>
       </article>
 
+
       <article class="experience-item">
         <h3 class="job-title">Software Developer</h3>
-        <p class="job-company">
-          <a href="https://kpsg.com/" target="_blank" rel="noopener">KPSG Official</a>
-        </p>
-        <p class="job-duration">Jun 2023 – Dec 2024</p>
+        <p class="job-company"><a href="https://kpsg.com/" target="_blank" rel="noopener">KPSG Official</a></p>
+        <p class="job-duration">June 2023 - December 2024</p>
         <p class="job-description">
-          Developed responsive enterprise web applications using .NET MVC 4.6, integrated third-party APIs, and enhanced
-          UI/UX for optimal user experience across internal platforms.
+          Developed and maintained web applications using .NET MVC 4.6, focusing on enhancing user experience and
+          integrating third-party APIs. Worked closely with UI/UX teams to deliver responsive and reliable solutions.
         </p>
       </article>
 
       <article class="experience-item">
         <h3 class="job-title">Web Developer</h3>
-        <p class="job-company">
-          <a href="https://zeroone.co.id/" target="_blank" rel="noopener">Zero One</a>
-        </p>
-        <p class="job-duration">Jul 2022 – May 2023</p>
+        <p class="job-company"><a href="https://zeroone.co.id/" target="_blank" rel="noopener">Zero One</a></p>
+        <p class="job-duration">July 2022 - January 2023</p>
         <p class="job-description">
-          Built and maintained frontend components and backend services for client-facing applications. Applied
-          performance optimization techniques and modern web standards to deliver efficient web solutions.
+          Built and maintained responsive websites using Yii2 framework, ensuring high performance and usability.
+          Collaborated with design teams to implement clean, user-friendly interfaces and contributed to backend
+          development.
         </p>
       </article>
     </section>
@@ -304,32 +300,23 @@
 
     </section>
 
-   <!-- Contact -->
+    <!-- Contact -->
     <section id="contact" tabindex="-1" aria-labelledby="contact-title" style="margin-top:80px;">
       <h2 id="contact-title">Get In Touch</h2>
       <p>
         Whether you have a question or just want to say hi, feel free to drop me a line.
       </p>
-      <p>
-        <a 
-          href="mailto:davidapricioturpyn@gmail.com" 
-          aria-label="Send an email to David Apricio Turpyn"
-          style="color: #64ffda; font-weight: 600; font-size: 16px; text-decoration: none;"
-          onmouseover="this.style.textDecoration='underline'" 
-          onmouseout="this.style.textDecoration='none'"
-        >
-          Say Hello
-        </a>
-      </p>
+      <a href="mailto:davidapricioturpyn@gmail.com" aria-label="Send email"
+        style="color:#64ffda; font-weight:600; font-size:16px;">Say Hello</a>
     </section>
 
 
     <footer class="footer" aria-label="Footer">
       <p>© 2025 David Turpyn. All rights reserved.</p>
     </footer>
-
   </main>
-<script src="./js/core.js"></script>
+  <script src="./js/core.js"></script>
+
 </body>
 
 </html>

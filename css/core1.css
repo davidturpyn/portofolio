@@ -1,0 +1,343 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  background: #000000; /* Full black background */
+  color: #e0e0e0;       /* Netral, abu terang */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  color: #cccccc; /* Netral, abu muda */
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffffff; /* Putih saat hover */
+}
+
+/* Container */
+main {
+  max-width: 700px;
+  padding: 100px 30px 80px 30px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+nav.navbar {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav .logo svg {
+  height: 60px;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.logo svg:hover rect,
+.logo svg:hover text {
+  stroke: #ffffff;
+  fill: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.nav-links a {
+  text-transform: uppercase;
+  color: #bbbbbb;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+nav a.resume-link {
+  border: 1px solid #888888;
+  color: #cccccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+nav a.resume-link:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* About */
+.about-section {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 80px auto;
+  padding: 0 20px;
+}
+
+.about-section p {
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #c0c0c0;
+  font-size: 16px;
+}
+
+/* Social */
+.social-icons {
+  position: fixed;
+  left: 20px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 100;
+}
+
+.social-icons a {
+  color: #999999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+.social-icons svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-icons::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 90px;
+  background-color: #444444;
+  margin: 8px auto 0;
+  opacity: 0.5;
+}
+
+.email-fixed {
+  position: fixed;
+  right: 50px;
+  bottom: 40px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: #999999;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 100;
+  user-select: none;
+  display: inline-block;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.email-fixed:hover {
+  color: #ffffff;
+}
+
+.email-fixed::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #444444;
+  opacity: 0.5;
+  margin-top: 6px;
+}
+
+/* Headings */
+h1 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 16px;
+  background: #333333;
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: -1;
+  border-radius: 4px;
+  animation: pulseHighlight 3s infinite;
+}
+
+@keyframes pulseHighlight {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #dddddd;
+  margin-bottom: 8px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.experience-item,
+.work-item {
+  margin-bottom: 32px;
+}
+
+.job-title {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.job-company {
+  color: #aaaaaa;
+  font-weight: 600;
+}
+
+.job-duration {
+  font-style: italic;
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 8px;
+}
+
+.job-description {
+  margin-top: 8px;
+}
+
+.tech-list {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #777777;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #333333;
+  object-fit: cover;
+  margin-bottom: 40px;
+  box-shadow: 0 0 15px #33333366;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    padding: 16px 20px;
+    z-index: 1000;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+
+  nav a.resume-link {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  main {
+    padding: 160px 20px 80px 20px;
+  }
+
+  .email-fixed {
+    display: none;
+  }
+
+  .social-icons {
+    position: fixed;
+    flex-direction: row;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: #000000;
+    padding: 10px 0;
+    border-top: 1px solid #1a1a1a;
+  }
+
+  .social-icons::after {
+    display: none;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  .about-section {
+    padding: 0 10px;
+  }
+}
