@@ -10,3 +10,20 @@
       }
     });
   });
+
+
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.company-content');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Reset active class
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
+
+    // Activate current
+    tab.classList.add('active');
+    const target = tab.getAttribute('data-company');
+    document.getElementById(target).classList.add('active');
+  });
+});

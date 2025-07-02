@@ -9,20 +9,21 @@ html,
 body {
   height: 100%;
   font-family: 'Fira Code', 'Source Code Pro', monospace;
-  background: #282c34; /* One Dark Pro background */
-  color: #abb2bf;       /* Default text color */
+  background: #000000; /* Full black background */
+  color: #e0e0e0;       /* Netral, abu terang */
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 a {
-  color: #61afef; /* Blue */
+  color: #cccccc; /* Netral, abu muda */
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #e5c07b; /* Yellow */
+  color: #ffffff; /* Putih saat hover */
 }
 
 /* Container */
@@ -31,6 +32,181 @@ main {
   padding: 100px 30px 80px 30px;
   margin: 0 auto;
 }
+
+.experience-wrapper {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Sidebar (tab list) */
+.company-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid #2f3545;
+  width: 180px;
+}
+
+.company-tabs .tab {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  color: #8892b0;
+  font-family: monospace;
+  transition: all 0.2s ease;
+}
+
+.company-tabs .tab:hover {
+  background: rgba(100, 255, 218, 0.1);
+}
+
+.company-tabs .tab.active {
+  border-left: 2px solid #64ffda;
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.05);
+}
+
+/* Content area */
+.company-content-wrapper {
+  flex-grow: 1;
+}
+
+.company-content {
+  display: none;
+}
+
+.company-content.active {
+  display: block;
+}
+
+.company-content h3 {
+  font-size: 1.2rem;
+  color: #ccd6f6;
+}
+
+.company-content h3 span {
+  color: #64ffda;
+}
+
+.company-content .duration {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #8892b0;
+  margin-bottom: 1rem;
+}
+
+.company-content ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+  color: #a8b2d1;
+}
+
+.clickable {
+  color: #64ffda;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.clickable::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #64ffda;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.2s ease;
+}
+
+.clickable:hover::after {
+  width: 100%;
+}
+
+
+#work {
+  color: #ccd6f6;
+}
+
+#work h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #64ffda;
+  font-family: 'Fira Code', monospace;
+}
+
+.work-item {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.project-content {
+  z-index: 2;
+}
+
+.project-overline {
+  color: #64ffda;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.project-title a {
+  color: #e6f1ff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.project-title a:hover {
+  color: #64ffda;
+  text-decoration: underline;
+}
+
+.project-description {
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #8892b0;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.project-tech-list li {
+  white-space: nowrap;
+}
+
+.project-links a {
+  color: #64ffda;
+  font-size: 1.2rem;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px -15px #020c1b;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.project-image img:hover {
+  opacity: 1;
+}
+
+
 
 /* Navbar */
 nav.navbar {
@@ -51,12 +227,10 @@ nav .logo svg {
   display: inline-block;
 }
 
-.logo svg:hover rect {
-  stroke: #e5c07b; /* Biru jadi kuning saat hover */
-}
-
+.logo svg:hover rect,
 .logo svg:hover text {
-  fill: #e5c07b;
+  stroke: #ffffff;
+  fill: #ffffff;
 }
 
 .nav-links {
@@ -69,7 +243,7 @@ nav .logo svg {
 
 .nav-links a {
   text-transform: uppercase;
-  transition: color 0.3s;
+  color: #bbbbbb;
   display: flex;
   align-items: center;
   height: 32px;
@@ -78,14 +252,14 @@ nav .logo svg {
 }
 
 .nav-links a:hover {
-  color: #e5c07b;
+  color: #ffffff;
 }
 
 nav a.resume-link {
-  border: 1px solid #61afef;
+  border: 1px solid #888888;
+  color: #cccccc;
   padding: 6px 12px;
   border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
   display: inline-flex;
   align-items: center;
   height: 32px;
@@ -95,10 +269,11 @@ nav a.resume-link {
 }
 
 nav a.resume-link:hover {
-  background-color: #61afef;
-  color: #282c34;
+  background-color: #ffffff;
+  color: #000000;
 }
 
+/* About */
 .about-section {
   text-align: center;
   max-width: 500px;
@@ -109,11 +284,11 @@ nav a.resume-link:hover {
 .about-section p {
   margin-top: 20px;
   line-height: 1.6;
-  color: #98c379; /* Green */
+  color: #c0c0c0;
   font-size: 16px;
 }
 
-/* Social left vertical */
+/* Social */
 .social-icons {
   position: fixed;
   left: 20px;
@@ -125,8 +300,7 @@ nav a.resume-link:hover {
 }
 
 .social-icons a {
-  color: #61afef;
-  transition: color 0.3s;
+  color: #999999;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -135,7 +309,7 @@ nav a.resume-link:hover {
 }
 
 .social-icons a:hover {
-  color: #e5c07b;
+  color: #ffffff;
 }
 
 .social-icons svg {
@@ -149,7 +323,7 @@ nav a.resume-link:hover {
   display: block;
   width: 1px;
   height: 90px;
-  background-color: #61afef;
+  background-color: #444444;
   margin: 8px auto 0;
   opacity: 0.5;
 }
@@ -162,19 +336,18 @@ nav a.resume-link:hover {
   transform: rotate(180deg);
   font-size: 14px;
   letter-spacing: 0.15em;
-  color: #61afef;
+  color: #999999;
   font-weight: 600;
   cursor: pointer;
   z-index: 100;
   user-select: none;
-  transition: color 0.3s;
   display: inline-block;
   padding-bottom: 8px;
   text-align: center;
 }
 
 .email-fixed:hover {
-  color: #e5c07b;
+  color: #ffffff;
 }
 
 .email-fixed::after {
@@ -182,23 +355,23 @@ nav a.resume-link:hover {
   display: block;
   width: 100%;
   height: 1px;
-  background-color: #61afef;
+  background-color: #444444;
   opacity: 0.5;
   margin-top: 6px;
 }
 
-/* Section headings */
+/* Headings */
 h1 {
   font-size: 42px;
   font-weight: 600;
-  color: #61afef;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
 h2 {
   font-size: 42px;
   font-weight: 800;
-  color: #abb2bf;
+  color: #e0e0e0;
   margin-bottom: 20px;
   position: relative;
   display: inline-block;
@@ -209,10 +382,10 @@ h2::after {
   position: absolute;
   width: 100%;
   height: 16px;
-  background: #61afef;
+  background: #333333;
   bottom: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0.4;
   z-index: -1;
   border-radius: 4px;
   animation: pulseHighlight 3s infinite;
@@ -226,14 +399,8 @@ h2::after {
 h3 {
   font-weight: 600;
   font-size: 18px;
-  color: #61afef;
+  color: #dddddd;
   margin-bottom: 8px;
-}
-
-p, li {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #98c379;
 }
 
 ul {
@@ -248,18 +415,18 @@ ul {
 
 .job-title {
   font-weight: 700;
-  color: #abb2bf;
+  color: #ffffff;
 }
 
 .job-company {
-  color: #d19a66;
+  color: #aaaaaa;
   font-weight: 600;
 }
 
 .job-duration {
   font-style: italic;
   font-size: 14px;
-  color: #c678dd;
+  color: #888888;
   margin-bottom: 8px;
 }
 
@@ -270,17 +437,17 @@ ul {
 .tech-list {
   margin-top: 8px;
   font-size: 14px;
-  color: #56b6c2;
+  color: #777777;
 }
 
 .profile-photo {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 4px solid #61afef;
+  border: 4px solid #333333;
   object-fit: cover;
   margin-bottom: 40px;
-  box-shadow: 0 0 15px #61afef66;
+  box-shadow: 0 0 15px #33333366;
   transition: transform 0.3s ease;
 }
 
@@ -295,12 +462,13 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #282c34;
+    background-color: #000000;
     padding: 16px 20px;
     z-index: 1000;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
   }
 
   .nav-links {
@@ -329,9 +497,9 @@ ul {
     bottom: 0;
     width: 100%;
     justify-content: center;
-    background-color: #282c34;
+    background-color: #000000;
     padding: 10px 0;
-    border-top: 1px solid #3e4451;
+    border-top: 1px solid #1a1a1a;
   }
 
   .social-icons::after {
